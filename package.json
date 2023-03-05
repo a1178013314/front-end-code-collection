@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "vue:dev":"lerna run --scope vue3-demo dev",
+    "react:dev":"lerna run --scope react-demo start"
+
+  },
+  "devDependencies": {
+    "lerna": "^6.1.0"
+  }
+}

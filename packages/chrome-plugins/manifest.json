@@ -1,0 +1,32 @@
+{
+    "name": "chrome-plugin",
+    "description": "各种插件合集",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "./assets/images/login.png"
+    },
+    "action": {
+        "default_popup": "./popup.html",
+        "default_icon": "./assets/images/login.png",
+        "default_title": "chrome 工具集"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.zhipin.com/*",
+                "https://www.liepin.com/*"
+            ],
+            "js": [
+                "./assets/js/injection.js"
+            ],
+            "all_frames": true
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "cookies",
+        "storage",
+        "tabs"
+    ]
+}

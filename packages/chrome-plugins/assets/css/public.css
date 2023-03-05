@@ -1,0 +1,17 @@
+body{
+    width: 500px;
+    height: 500px;
+}
+.group{
+    display: flex;
+    flex-wrap: wrap;
+}
+.two-in-row{
+    width: 48%!important;
+    margin: auto;
+}
+.four-in-row{
+    width: 24%!important;
+    margin: auto;
+    display: inline-block;
+}

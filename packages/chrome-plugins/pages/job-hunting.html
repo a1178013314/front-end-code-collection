@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../assets/css/pico.css">
+    <link rel="stylesheet" href="../assets/css/job-hunting.css">
+    <link rel="stylesheet" href="../assets/css/public.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="group">
+            <button id="public-save" class="two-in-row">记录状态</button>
+            <button id="public-clear" class="two-in-row">清除状态并返回</button>
+        </div>
+        
+        <label>
+            文案模板
+            <textarea id="translate" placeholder="需要替换的变量使用 # 加 数字替换"></textarea>
+        </label>
+        <label>
+            参数1：#1，优先级 文案->自动获取,使用自动请清空内容
+            <input type="text" id="#1" placeholder="文案" >
+        </label>
+        <label>
+            参数2：#2，优先级 文案->自动获取,使用自动请清空内容
+            <input type="text" id="#2" placeholder="文案" >
+        </label>
+
+        <button id="create">生成文案自动写入剪贴板</button>
+    </main>
+    <script src="../assets//js/chrom-plugin-promise.js"></script>
+    <script src="../assets/js/publilc.js"></script>
+    <script src="../assets/js/job-hunting.js"></script>
+</body>
+
+</html>

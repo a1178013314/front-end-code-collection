@@ -1,0 +1,12 @@
+{
+    "plugins": [
+        [
+            "./src/plugin",
+            {
+                "key": "BASE_URL",
+                "product-url": "aaabbbccc",
+                "dev-rul": "1111222333"
+            }
+        ]
+    ]
+}

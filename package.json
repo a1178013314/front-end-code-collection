@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "vue:dev":"lerna run --scope vue3-demo dev",
+    "vue3:dev":"lerna run --scope vue3-demo dev",
     "react:dev":"lerna run --scope react-demo start"
 
   },

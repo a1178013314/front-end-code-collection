@@ -30,7 +30,10 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HTMLWebPlugin({
             template: "./src/index.html",
-            watch: true
+            // watch: false,
+            // inline :false,
+            hot:false,
+            liveReload: false,
         }),
     ]
 

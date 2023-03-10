@@ -29,7 +29,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HTMLWebPlugin({
-            template: "./src/index.html"
+            template: "./src/index.html",
+            watch: true
         }),
     ]
 

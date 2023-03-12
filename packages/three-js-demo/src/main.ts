@@ -6,4 +6,7 @@
 // import './systems/场景/006使用透视照相机滚动浏览全景图.ts'
 // import './systems/场景/007使用鼠标拖曳功能查看并缩放全景图.ts'
 // import './systems/场景/008使用鼠标拖曳功能播放全景视频.ts'
-import './systems/场景/009在场景中添加粒子实现星空背景.ts'
+// import './systems/场景/009在场景中添加粒子实现星空背景.ts'
+// import './systems/场景/010使用六幅图像的天空盒设置背景.ts'
+// import './systems/场景/011使用一个图像文件创建天空盒子.ts'
+import './systems/场景/012使用TransformControls平移对象.ts'

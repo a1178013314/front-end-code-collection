@@ -9,4 +9,5 @@
 // import './systems/场景/009在场景中添加粒子实现星空背景.ts'
 // import './systems/场景/010使用六幅图像的天空盒设置背景.ts'
 // import './systems/场景/011使用一个图像文件创建天空盒子.ts'
-import './systems/场景/012使用TransformControls平移对象.ts'
+// import './systems/场景/012使用TransformControls平移对象.ts'
+import './systems/场景/013使用transformControls拉伸对象.ts'

@@ -14,6 +14,7 @@
 - my-public-utils : 通用工具函数
 - react-demo : react测试项目
 - vue3-demo : vue3测试项目
+- three-js-demo : 各种threejs 例子
 
 ## License
 

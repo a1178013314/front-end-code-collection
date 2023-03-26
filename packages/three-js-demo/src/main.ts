@@ -10,4 +10,10 @@
 // import './systems/场景/010使用六幅图像的天空盒设置背景.ts'
 // import './systems/场景/011使用一个图像文件创建天空盒子.ts'
 // import './systems/场景/012使用TransformControls平移对象.ts'
-import './systems/场景/013使用transformControls拉伸对象.ts'
+// import './systems/场景/013使用transformControls拉伸对象.ts'
+// import './systems/场景/014使用TransformControls旋转对象.ts'
+// import './systems/场景/015使用DragControls任意拖拽对象.ts'
+// import './systems/场景/016使用OrbitControls任意缩放对象.ts'
+// import './systems/场景/017使用OrbitControls旋转照相机.ts'
+import './systems/场景/018在多个对象中使用鼠标旋转对象.ts'
+

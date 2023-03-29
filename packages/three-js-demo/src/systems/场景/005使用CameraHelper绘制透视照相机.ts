@@ -19,7 +19,7 @@ const myRenderer = new WebGLRenderer({
 
 myRenderer.setSize(myWidth, myHeight)
 myRenderer.setClearColor("white", 1)//设置清空颜色
-containerDom?.appendChild(myRenderer.domElement)
+document.body.appendChild(myRenderer.domElement)
 //场景
 const mySence = new Scene()
 
@@ -41,11 +41,11 @@ animate()
 // 
 function animate(){
     requestAnimationFrame(animate)
-    // let r = Date.now() * 0.0005
-    // myPerspectiveCamera.rotateY(10*r)
-    // myMesh.position.x = 700*Math.cos(r)
-    // myMesh.position.y = 700*Math.sin(r)
-    // myMesh.position.z = 700*Math.sin(r)
+    let r = Date.now() * 0.0005
+    myPerspectiveCamera.rotateY(10*r)
+    myMesh.position.x = 700*Math.cos(r)
+    myMesh.position.y = 700*Math.sin(r)
+    myMesh.position.z = 700*Math.sin(r)
 
     myPerspectiveCamera.lookAt(myMesh.position)
     myRenderer.setViewport(0,0,myWidth,myHeight)

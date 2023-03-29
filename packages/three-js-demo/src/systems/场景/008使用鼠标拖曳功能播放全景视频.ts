@@ -21,7 +21,7 @@ myRenderer = new WebGLRenderer({
     alpha: true
 })
 myRenderer.setSize(myWidth, myHeight)
-containerDom?.appendChild(myRenderer.domElement)
+document.body.appendChild(myRenderer.domElement)
 //场景
 myScene = new Scene()
 //摄像机
@@ -29,7 +29,7 @@ myCamera = new PerspectiveCamera(75,k,1,1100)
 myCamera.position.set(10, 3, 0)
 myCamera.lookAt(0, 0, 0)
 //相机控制
-const controls = new OrbitControls(myCamera, containerDom)
+const controls = new OrbitControls(myCamera, myRenderer.domElement)
 controls.update()
 //创建视频播放
 let videoDom = document.createElement('video')

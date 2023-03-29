@@ -15,14 +15,14 @@ const aspectRatio = myWidth / myHeight
 myRenderer = new WebGLRenderer()
 myRenderer.setSize(myWidth, myHeight)
 myRenderer.setClearColor('black', 1)
-containerDom.appendChild(myRenderer.domElement)
+document.body.appendChild(myRenderer.domElement)
 //场景
 myScene = new Scene()
 
 //摄像机
 myCamera = new PerspectiveCamera(45,aspectRatio,1,5000)
 myCamera.position.z = 1000
-const controls = new OrbitControls(myCamera, containerDom)
+const controls = new OrbitControls(myCamera, myRenderer.domElement)
 controls.update()
 
 //灯光 

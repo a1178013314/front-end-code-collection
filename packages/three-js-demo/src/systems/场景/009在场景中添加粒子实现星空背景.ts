@@ -24,7 +24,7 @@ myRenderer = new WebGLRenderer({
 })
 myRenderer.setSize(myWidth, myHeight)
 myRenderer.setClearColor('black',1.0)
-containerDom?.appendChild(myRenderer.domElement)
+document.body.appendChild(myRenderer.domElement)
 
 //场景
 myScene = new Scene()
@@ -32,7 +32,7 @@ myScene = new Scene()
 myCamera = new PerspectiveCamera(45,k,1,5000)
 myCamera.position.z = 1000
 //相机控制
-const controls = new OrbitControls(myCamera, containerDom)
+const controls = new OrbitControls(myCamera, myRenderer.domElement)
 controls.update()
 //绿色球体
 mySphereGeometry = new SphereGeometry(400,16,8)

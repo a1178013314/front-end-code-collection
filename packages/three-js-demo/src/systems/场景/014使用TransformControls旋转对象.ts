@@ -10,16 +10,13 @@ let myLight: DirectionalLight
 
 //DOM
 const containerDom = document.getElementById("three-container")
-if(containerDom === null){
-    throw new Error('dom 不存在')
-}
 const myWidth = window.innerWidth
 const myHeight = window.innerHeight
 const aspectRatio = myWidth / myHeight
 //渲染器
 myRender = new WebGLRenderer()
 myRender.setSize(myWidth, myHeight)
-containerDom.appendChild(myRender.domElement)
+document.body.appendChild(myRender.domElement)
 //场景
 myScene = new Scene()
 myScene.background = new Color(0xffffff)
@@ -38,7 +35,7 @@ myScene.add(myLight)
 new TextureLoader().loadAsync('./images/img002.jpg').then((texture:Texture) => {
     const mySquare = new BoxGeometry(400,400,400)
     const myMaterial = new MeshLambertMaterial({map:texture})
-    const mySquareControls = new TransformControls(myCamera, containerDom)
+    const mySquareControls = new TransformControls(myCamera, myRender.domElement)
 
     mySquareControls.addEventListener('change', ()=>{
         myRender.render(myScene, myCamera)

@@ -9,7 +9,8 @@ const myHeight = window.innerHeight
 const myRenderer = new WebGLRenderer({antialias: true})
 myRenderer.setSize(myWidth, myHeight)
 myRenderer.setClearColor("white", 1)//设置清空颜色
-containerDom?.appendChild(myRenderer.domElement)
+// containerDom?.appendChild(myRenderer.domElement)
+document.body.appendChild(myRenderer.domElement)
 
 //场景
 const mySence = new Scene()

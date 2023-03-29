@@ -53,6 +53,9 @@ module.exports = {
         })
         
     ],
+    resolve:{
+        extensions: ['.ts','.js'],
+    }
     // watchOptions:{
     //     poll:1000,//监测修改的时间(ms)
     //     aggregeateTimeout:500, //防止重复按键，500毫米内算按键一次

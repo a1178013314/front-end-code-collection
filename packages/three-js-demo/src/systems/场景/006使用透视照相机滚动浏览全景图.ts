@@ -24,7 +24,7 @@ myRenderer.setClearColor("white", 1)//设置清空颜色
 mySence = new Scene()
 //加载图片
 const myTextureLoader = new TextureLoader()
-myTextureLoader.load('http://127.0.0.1:61199/img050.jpg', (myTexture) => {
+myTextureLoader.load('./images/img050.jpg', (myTexture) => {
     init(myTexture)
     animate()
 
@@ -33,26 +33,26 @@ myTextureLoader.load('http://127.0.0.1:61199/img050.jpg', (myTexture) => {
 function init(myTexture:Texture){
     myRenderer = new WebGLRenderer({antialias:true, alpha:true})
     myRenderer.setSize(myWidth, myHeight)
-    containerDom?.appendChild(myRenderer.domElement)
+    document.body.appendChild(myRenderer.domElement)
     myCamera = new PerspectiveCamera(90,k,1,1000)
     mySence = new Scene()
     mySence.background = new WebGLCubeRenderTarget(1024).fromEquirectangularTexture(myRenderer, myTexture).texture
 }
 function animate(){
     requestAnimationFrame(animate)
-    // let r = Date.now() * 0.0005
+    let r = Date.now() * 0.0005
     myCamera.rotateX(0.001)
     myCamera.rotateY(0.001)
     myCamera.rotateZ(0.001)
-    // lon += 0.15
-    // lat =  Math.max(-85, Math.min(85, lat))
-    // phi = MathUtils.degToRad(90 - lat)
-    // theta = MathUtils.degToRad(lon)
+    lon += 0.15
+    lat =  Math.max(-85, Math.min(85, lat))
+    phi = MathUtils.degToRad(90 - lat)
+    theta = MathUtils.degToRad(lon)
 
-    // myCamera.position.x = 100*Math.sin(phi) * Math.cos(theta)
-    // myCamera.position.y = 100*Math.cos(phi)
-    // myCamera.position.z = 100*Math.sin(phi) * Math.sin(theta)
-    // myCamera.lookAt(mySence.position)
+    myCamera.position.x = 100*Math.sin(phi) * Math.cos(theta)
+    myCamera.position.y = 100*Math.cos(phi)
+    myCamera.position.z = 100*Math.sin(phi) * Math.sin(theta)
+    myCamera.lookAt(mySence.position)
     myRenderer.render(mySence, myCamera)
 }
 

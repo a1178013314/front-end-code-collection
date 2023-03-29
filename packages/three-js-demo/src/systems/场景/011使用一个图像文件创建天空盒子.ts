@@ -21,7 +21,7 @@ const aspectRatio = myWidth / myHeight
 myRenderer = new WebGLRenderer()
 myRenderer.setSize(myWidth, myHeight)
 myRenderer.setClearColor('black', 1)
-containerDom.appendChild(myRenderer.domElement)
+document.body.appendChild(myRenderer.domElement)
 //场景
 myScene = new Scene()
 //摄像机
@@ -29,7 +29,7 @@ myCamera = new PerspectiveCamera(90, aspectRatio, 0.1, 1000)
 myCamera.position.x = 0
 myCamera.position.y = 0
 myCamera.position.z = 0.0001
-const controls = new OrbitControls(myCamera, containerDom)
+const controls = new OrbitControls(myCamera, myRenderer.domElement)
 controls.update()
 //处理图片
 myTextures = [];

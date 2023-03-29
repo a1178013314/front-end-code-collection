@@ -20,7 +20,7 @@ const aspectRatio = myWidth / myHeight
 //渲染器
 myRenderer = new WebGLRenderer()
 myRenderer.setSize(myWidth, myHeight)
-containerDom.appendChild(myRenderer.domElement)
+document.body.appendChild(myRenderer.domElement)
 
 //场景
 myScene = new Scene()

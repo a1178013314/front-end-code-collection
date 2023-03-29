@@ -1,4 +1,4 @@
-import THREE from 'three'
+import * as THREE from 'three'
 // 创建一个场景
 const scene = new THREE.Scene();
 

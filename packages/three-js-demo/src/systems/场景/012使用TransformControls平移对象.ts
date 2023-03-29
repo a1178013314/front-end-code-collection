@@ -23,7 +23,7 @@ const aspectRatio = myWidth / myHeight
 myRenderer = new WebGLRenderer()
 myRenderer.setSize(myWidth, myHeight)
 myRenderer.setClearColor('black', 1)
-containerDom.appendChild(myRenderer.domElement)
+document.body.appendChild(myRenderer.domElement)
 //场景
 myScene = new Scene()
 myScene.background = new Color(0xffffff)

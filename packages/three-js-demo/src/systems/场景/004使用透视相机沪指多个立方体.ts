@@ -4,7 +4,6 @@ import { WebGLRenderer, Scene, PointLight, OrthographicCamera, BoxGeometry,
    
    } from "three"
 //DOM
-const containerDom = document.getElementById("three-container")
 const myWidth = window.innerWidth
 const myHeight = window.innerHeight
 const k = myWidth/myHeight
@@ -16,7 +15,7 @@ const myRenderer = new WebGLRenderer({
 
 myRenderer.setSize(myWidth, myHeight)
 myRenderer.setClearColor("white", 1)//设置清空颜色
-containerDom?.appendChild(myRenderer.domElement)
+document.body.appendChild(myRenderer.domElement)
 //场景
 const mySence = new Scene()
 //摄像机
